@@ -1,0 +1,8 @@
+Python Number theory library
+============================
+Algorithms:
+  - gdc(a, b)
+    computes the greatest common divisor between a and b
+
+  - pell_solutions(n, k)
+    computes a list with the first k solutions of the Pell equation: x^2 - n(y^2) = 1
