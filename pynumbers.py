@@ -22,7 +22,7 @@ def pell_solutions(n, k):
     q0, q1 = 0, 1
 
     # Iterate over convergents until we find a solution
-    while p0*p0 - n*q0*q0 != 1:
+    while p1*p1 - n*q1*q1 != 1:
         r = 1.0 / (r - a)
         a = int(r)
 
@@ -30,10 +30,10 @@ def pell_solutions(n, k):
         q0, q1 = q1, a*q1 + q0
 
     # Generate the next k-1 solutions from the fundamental one
-    sols.append([p0, q0])
-    for k in range(2,k):
-        x = int(((p0+q0*sqrt(n))**k + (p0-q0*sqrt(n))**k)/2 + 0.0001)
-        y = int(((p0+q0*sqrt(n))**k - (p0-q0*sqrt(n))**k)/(2*sqrt(n)) + 0.0001)
+    sols.append([p1, q1])
+    for k in range(2,k+1):
+        x = int(((p1+q1*sqrt(n))**k + (p1-q1*sqrt(n))**k)/2 + 0.0001)
+        y = int(((p1+q1*sqrt(n))**k - (p1-q1*sqrt(n))**k)/(2*sqrt(n)) + 0.0001)
         sols.append([x, y])
     return sols
 
