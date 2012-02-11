@@ -37,3 +37,16 @@ def pell_solutions(n, k):
         sols.append([x, y])
     return sols
 
+# Return a list of primes less than N
+def sieve (N):
+
+    isprime = [True]*(N)
+
+    i = 2
+    while (i*i < N):
+        if isprime[i]:
+            for j in range(i*i, N, i):
+                isprime[j] = False
+        i += 1
+
+    return filter(lambda x: isprime[x], range(1,N))
