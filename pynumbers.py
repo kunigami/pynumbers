@@ -30,10 +30,13 @@ def pell_solutions(n, k):
         q0, q1 = q1, a*q1 + q0
 
     # Generate the next k-1 solutions from the fundamental one
-    sols.append([p1, q1])
-    for k in range(2,k+1):
-        x = int(((p1+q1*sqrt(n))**k + (p1-q1*sqrt(n))**k)/2 + 0.0001)
-        y = int(((p1+q1*sqrt(n))**k - (p1-q1*sqrt(n))**k)/(2*sqrt(n)) + 0.0001)
+    f = f0 = p1+q1*sqrt(n)
+    g = g0 = p1-q1*sqrt(n)
+    for k in range(1,k+1):
+        x = int((f + g)/2 + 0.0001)
+        y = int((f - g)/(2*sqrt(n)) + 0.0001)
+        f *= f0
+        g *= g0
         sols.append([x, y])
     return sols
 
