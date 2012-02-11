@@ -9,7 +9,8 @@ Algorithms:
   - pell_solutions(n, k)
     - complexity: O(n^(1/2) log n)
     - memory: O(k)
-    - desciption: computes a list with the first k solutions of the Pell equation: x^2 - n(y^2) = 1
+    - desciption: computes a list with the first k solutions of the Pell 
+                  equation: x^2 - n(y^2) = 1
 
   - sieve(n)
     - complexity: O(n (log log n))
