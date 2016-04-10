@@ -3,7 +3,7 @@ from exponentiation import modexp
 
 # Return a list of primes less than N
 def sieve (N):
-
+    """Return a list of primes less than N"""
     isprime = [True]*(N)
 
     i = 2
@@ -13,7 +13,7 @@ def sieve (N):
                 isprime[j] = False
         i += 1
 
-    return filter(lambda x: isprime[x], range(1,N))
+    return filter(lambda x: isprime[x], range(2,N))
 
 # Decides whether a number is prime using the miller-rabin test
 def miller_rabin(n, k=10):
