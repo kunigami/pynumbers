@@ -1,5 +1,5 @@
 import unittest
-from skewedBinaryNumber import decimalToSkewedBinary
+from skewed_binary_number import decimalToSkewedBinary
 
 class TestStringMethods(unittest.TestCase):
 

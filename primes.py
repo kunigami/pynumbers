@@ -17,9 +17,9 @@ def sieve(N):
 
     return list(filter(lambda x: isprime[x], range(2, N)))
 
-# Decides whether a number is prime using the miller-rabin test
-
-
+# A probabilistic algorithm that decides whether a number n is prime using
+# the miller-rabin test.
+# If n is not prime, there's a 4^-k chance of it reporting it is prime
 def miller_rabin(n, k=10):
     if n == 2 or n == 3:
         return True
